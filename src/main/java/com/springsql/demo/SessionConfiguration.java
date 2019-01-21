@@ -8,6 +8,6 @@ public class SessionConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         // 添加拦截器
-        registry.addInterceptor(new SessionInterceptor()).addPathPatterns("/**");
+        registry.addInterceptor(new SessionInterceptor()).addPathPatterns("/**").excludePathPatterns("/user/list");
     }
 }
