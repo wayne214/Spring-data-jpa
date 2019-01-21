@@ -4,54 +4,62 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "apps")
+@Table(name = "users")
 public class UserEntity implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id")
     private int id;
 
-    @Column(name = "app_name")
-    private String app_name;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "url")
-    private String url;
+    @Column(name = "age")
+    private int age;
 
-    @Column(name= "country")
-    private String country;
+    @Column(name= "address")
+    private String address;
 
+    @Column(name = "pwd")
+    private String pwd;
 
     public int getId() {
         return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPwd() {
+        return pwd;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public String getApp_name() {
-        return app_name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setApp_name(String app_name) {
-        this.app_name = app_name;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public String getUrl() {
-        return url;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-
 }
